@@ -9,38 +9,41 @@ public class Task2Calculator {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        double first;
-        double second;
+        int first;
+        String temp1;
+        String temp2;
+        int second;
         double result = 0;
         String action;
 
-        //Ввести первую перенную
-        System.out.println("Enter first number");
-        first = input.nextDouble();
-        System.out.println(first);
-
-        //Ввести один из следующих операторов: сложения, вычитания, умножения, деления
-        System.out.println("Enter one of this operators: \n+\n-\n*\n/");
-        action = input.next();
-        System.out.println(action);
-
-        //Ввести вторую переменную
-        System.out.println("Enter second number");
-        second = input.nextDouble();
-        System.out.println(second);
+        while (true) {
+            //Ввести первую перенную
+            System.out.println("\nEnter first number");
+            temp1 = input.nextLine();
+            first = Integer.parseInt(temp1);
 
 
+            //Ввести один из следующих операторов: сложения, вычитания, умножения, деления
+            System.out.println("Enter one of this operators: \n+\n-\n*\n/");
+            action = input.nextLine();
 
-        if(action.equals("+")){
-            result = first + second;
-        }else if (action.equals("-")){
-            result = first - second;
-        }else if (action.equals("*")){
-            result = first * second;
-        }else if (action.equals("/")){
-            result = first / second;
-        }System.out.printf("%.4f", result);
+            //Ввести вторую переменную
+            System.out.println("Enter second number");
+            temp2 = input.nextLine();
+            second = Integer.parseInt(temp2);
 
 
+
+            if (action.equals("+")) {
+                result = (first + second);
+            } else if (action.equals("-")) {
+                result = first - second;
+            } else if (action.equals("*")) {
+                result = first * second;
+            } else if (action.equals("/")) {
+                result = first / second;
+            }
+                System.out.printf("%.4f", result);
+        }
     }
 }

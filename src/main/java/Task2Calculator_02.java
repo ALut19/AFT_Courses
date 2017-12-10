@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 /**
- * Created by user on 06.12.2017.
+ * Created by Аедрей Лут on 10.12.2017.
  */
 public class Task2Calculator_02 {
     public static void main(String[] args) {
@@ -41,13 +41,13 @@ public class Task2Calculator_02 {
                 break;
             case "4":
                 if (second == 0)
-                System.out.println("nope!");
+                System.out.println("You can't divide into zero!");
                  else{
                      result = first / second;
                     sResult=String.valueOf(result);
                  }
                  break;
-            default: sResult="no step";
+            default: sResult="no choise";
 
         }
         System.out.println(sResult);

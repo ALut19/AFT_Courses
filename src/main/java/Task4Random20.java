@@ -11,7 +11,7 @@ public class Task4Random20 {
 
             if(array[i] > max){
                 max = array[i];
-            }if (array[i] < min){
+            }if (array[i] < min) {
                 min = array[i];
             }
         }

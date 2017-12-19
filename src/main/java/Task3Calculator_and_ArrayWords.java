@@ -65,8 +65,10 @@ public class Task3Calculator_and_ArrayWords {
 
         Scanner input1 = new Scanner(System.in);
 
-        String[] wn = {"first word", "second word", "third word", "fourth word", "fifth word", "sixth word"};
-        String[] arrayw = new String[6];
+        System.out.println("Enter amount of words:");
+        int size = input1.nextInt();
+   //     String[] wn = {"first word", "second word", "third word", "fourth word", "fifth word", "sixth word"};
+        String[] arrayw = new String[size];
 
         System.out.println("Words " + Arrays.toString(arrayw));
 
@@ -74,15 +76,17 @@ public class Task3Calculator_and_ArrayWords {
         int a = 0;
 
         for (int i = 0; i < arrayw.length; i++) {
-            System.out.println("Enter " + wn[i]);
+          //  System.out.println("Enter " + wn[i]);
+
+            System.out.println("Enter " + i);
             arrayw[i] = input1.nextLine();
-            System.out.println(arrayw[i]);
+        //    System.out.println(arrayw[i]);
 
             if (arrayw[i].length() > a) {
                 a = arrayw[i].length();
                 maxi = arrayw[i];
             }
         }
-        System.out.println(maxi);
+        System.out.println("Max word is " + maxi);
     }
 }
